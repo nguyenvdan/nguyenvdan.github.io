@@ -6,7 +6,7 @@
     <title>Experience — Daniel Nguyen</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,31 +17,31 @@
                 <a href="experience.html" class="active">experience</a>
                 <a href="projects.html">projects</a>
                 <a href="skills.html">skills</a>
-                <a href="blog.html">journal</a>
+                <a href="blog.html">thoughts</a>
             </nav>
         </div>
     </header>
 
-    <main class="page" style="max-width:600px;">
+    <main class="page" style="max-width:680px;">
         <div class="panel reveal">
             <div class="head" style="text-align:left;margin-bottom:20px;">
-                <h1>Experience</h1>
+                <h1>experience</h1>
             </div>
             <div class="divider"></div>
 
             <div class="block">
                 <div class="block-label">education</div>
-                <div class="entry"><span class="org">University of Virginia</span><span class="role">B.A. Computer Science, Minor in Engineering Business</span><span class="yr">2024 — present</span></div>
+                <div class="entry"><span class="e-main"><span class="org"><a class="lnk" href="https://www.virginia.edu" target="_blank" rel="noopener">University of Virginia</a></span><span class="role">B.A. Computer Science</span></span><span class="yr">aug 2024 — present</span></div>
             </div>
             <div class="block">
                 <div class="block-label">work</div>
-                <div class="entry"><span class="org">Atlas Copco</span><span class="role">AI Solutions Engineer Intern</span><span class="yr">jun 2026 — present</span></div>
-                <div class="entry"><span class="org">Harlen</span><span class="role">Cofounder</span><span class="yr">feb 2026 — present</span></div>
+                <div class="entry"><span class="e-main"><span class="org">Atlas Copco</span><span class="role">AI Solutions Engineer Intern</span></span><span class="yr">jun 2026 — present</span></div>
+                <div class="entry"><span class="e-main"><span class="org"><a class="lnk" href="https://harlen.ai" target="_blank" rel="noopener">Harlen</a></span><span class="role">Cofounder</span></span><span class="yr">feb 2026 — present</span></div>
             </div>
             <div class="block">
                 <div class="block-label">research</div>
-                <div class="entry"><span class="org">UVA Engineering</span><span class="role">Research Assistant</span><span class="yr">nov 2025 — present</span></div>
-                <div class="entry"><span class="org">Sunnybrook Research Institute</span><span class="role">ML Research Intern · 1st Author, AACR 2025</span><span class="yr">dec 2024 — aug 2025</span></div>
+                <div class="entry"><span class="e-main"><span class="org">UVA Engineering</span><span class="role">Research Assistant</span></span><span class="yr">nov 2025 — present</span></div>
+                <div class="entry"><span class="e-main"><span class="org">Sunnybrook Research Institute</span><span class="role">ML Research Intern · 1st Author, AACR 2025</span></span><span class="yr">dec 2024 — aug 2025</span></div>
             </div>
         </div>
     </main>
@@ -56,5 +56,6 @@
         }, { threshold: 0.04 });
         document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
     </script>
+    <script src="cursor.js"></script>
 </body>
 </html>

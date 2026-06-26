@@ -6,7 +6,7 @@
     <title>Projects — Daniel Nguyen</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,7 +17,7 @@
                 <a href="experience.html">experience</a>
                 <a href="projects.html" class="active">projects</a>
                 <a href="skills.html">skills</a>
-                <a href="blog.html">journal</a>
+                <a href="blog.html">thoughts</a>
             </nav>
         </div>
     </header>
@@ -25,13 +25,13 @@
     <main class="page" style="max-width:600px;">
         <div class="panel reveal">
             <div class="head" style="text-align:left;margin-bottom:20px;">
-                <h1>Projects</h1>
+                <h1>projects</h1>
             </div>
             <div class="divider"></div>
 
             <div class="block">
-                <a class="entry" href="#"><span class="org">Pipeline — Autonomous Customer Outreach</span><span class="role">Python, FastAPI, Next.js, Anthropic</span></a>
-                <a class="entry" href="#"><span class="org">Data Aggregation &amp; Outlier Detection</span><span class="role">C++, Systems, Networking</span></a>
+                <a class="entry" href="#"><span class="e-main"><span class="org">Pipeline — Autonomous Customer Outreach</span></span><span class="stack">Python · FastAPI · Next.js · Anthropic</span></a>
+                <a class="entry" href="#"><span class="e-main"><span class="org">Data Aggregation &amp; Outlier Detection</span></span><span class="stack">C++ · Systems · Networking</span></a>
             </div>
         </div>
     </main>
@@ -46,5 +46,6 @@
         }, { threshold: 0.04 });
         document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
     </script>
+    <script src="cursor.js"></script>
 </body>
 </html>
