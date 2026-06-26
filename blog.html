@@ -3,48 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog — Daniel Nguyen</title>
+    <title>Journal — Daniel Nguyen</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="wrap">
-        <div class="topnav">
-            <a href="index.html" class="wordmark">daniel nguyen</a>
+    <header class="topbar scrolled">
+        <div class="topbar-inner">
+            <a href="index.html" class="wordmark">Daniel Nguyen</a>
             <nav>
-                <a href="index.html">home</a>
-                <a href="work.html">work</a>
+                <a href="experience.html">experience</a>
                 <a href="projects.html">projects</a>
-                <a href="blog.html" class="active">blog</a>
+                <a href="skills.html">skills</a>
+                <a href="blog.html" class="active">journal</a>
             </nav>
         </div>
+    </header>
 
-        <header class="page-head offset">
-            <div class="eyebrow">blog</div>
-            <h1>journal</h1>
-            <p class="tagline">Notes to myself on what I'm building, learning, and thinking about.</p>
-        </header>
-
-        <section class="block">
-            <div class="sec-head"><span class="idx">01</span><h2>entries</h2></div>
-            <div class="block-body">
-                <!--
-                  To add a post, copy this block and edit it:
-
-                  <a class="post" href="#">
-                      <div class="date">2026 · 06 · 18</div>
-                      <div class="title">Your post title here</div>
-                  </a>
-                -->
-                <div class="empty">no entries yet — first one coming soon.</div>
+    <main class="page" style="max-width:560px;">
+        <div class="panel reveal">
+            <div class="head">
+                <h1>Journal</h1>
+                <p class="tag">Notes on what I'm building, learning, and thinking about.</p>
             </div>
-        </section>
 
-        <footer>
-            <span>© 2026 daniel nguyen</span>
-        </footer>
-    </div>
+            <div class="divider"></div>
+
+            <!--
+              To add an entry, copy this block and edit it:
+
+              <a class="post" href="#">
+                  <div class="date">2026 · 06 · 18</div>
+                  <div class="title">Your entry title here</div>
+              </a>
+            -->
+            <div class="empty">No entries yet — the first one is coming soon.</div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-inner">© 2026 Daniel Nguyen</div>
+    </footer>
+
+    <script>
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
+        }, { threshold: 0.04 });
+        document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    </script>
 </body>
 </html>

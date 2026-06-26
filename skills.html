@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills — Daniel Nguyen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar scrolled">
+        <div class="topbar-inner">
+            <a href="index.html" class="wordmark">Daniel Nguyen</a>
+            <nav>
+                <a href="experience.html">experience</a>
+                <a href="projects.html">projects</a>
+                <a href="skills.html" class="active">skills</a>
+                <a href="blog.html">journal</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page" style="max-width:600px;">
+        <div class="panel reveal">
+            <div class="head" style="text-align:left;margin-bottom:20px;">
+                <h1>Skills</h1>
+            </div>
+            <div class="divider"></div>
+
+            <div class="block">
+                <div class="skill-line">
+                    <span class="skill-k">languages</span>
+                    <span class="tags"><span>Python</span><span>C/C++</span><span>Java</span><span>TypeScript</span><span>SQL</span></span>
+                </div>
+                <div class="skill-line">
+                    <span class="skill-k">ai / ml</span>
+                    <span class="tags"><span>PyTorch</span><span>scikit-learn</span><span>Anthropic API</span><span>LangGraph</span><span>RAG</span><span>ChromaDB</span></span>
+                </div>
+                <div class="skill-line">
+                    <span class="skill-k">web / mobile</span>
+                    <span class="tags"><span>React</span><span>Next.js</span><span>Node.js</span><span>FastAPI</span><span>Mobile Dev</span><span>Xcode</span></span>
+                </div>
+                <div class="skill-line">
+                    <span class="skill-k">cloud</span>
+                    <span class="tags"><span>AWS</span><span>Azure Foundry</span><span>Databricks</span><span>Docker</span></span>
+                </div>
+                <div class="skill-line">
+                    <span class="skill-k">ai tools</span>
+                    <span class="tags"><span>Claude Code</span><span>Cursor</span><span>Wispr Flow</span><span>Granola</span></span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-inner">© 2026 Daniel Nguyen</div>
+    </footer>
+
+    <script>
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
+        }, { threshold: 0.04 });
+        document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    </script>
+</body>
+</html>
