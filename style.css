@@ -487,7 +487,8 @@ a.pub-title:hover { text-decoration-color: var(--ink); }
     .entry-body { grid-template-columns: 1fr; gap: 28px; }
     .photos { position: static; }
     .photo-row { height: auto; grid-template-columns: 1fr; }
-    .photo-row .ph { height: auto; aspect-ratio: 3 / 2; }
+    .photos .ph, .photos .ph.feature { height: auto; aspect-ratio: auto; }
+    .photos .ph img { height: auto; }
 }
 
 /* entry page — fixed viewport, vertically centered, only the writing scrolls (desktop) */
