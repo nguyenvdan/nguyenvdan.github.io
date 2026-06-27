@@ -460,7 +460,7 @@ a.pub-title:hover { text-decoration-color: var(--ink); }
 .ph img { width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity 0.2s var(--ease); }
 .ph:hover img { opacity: 0.88; }
 .ph.feature { aspect-ratio: 3 / 2; }
-.ph.feature img { object-position: center 10%; }
+.ph.feature img { object-position: center 30%; }
 
 /* photos pin on the left while the text scrolls */
 .photos { position: sticky; top: 88px; align-self: start; }
@@ -498,10 +498,9 @@ a.pub-title:hover { text-decoration-color: var(--ink); }
     .entry-page .entry-col { flex-shrink: 0; width: 100%; }
     .entry-page .entry-head { margin-bottom: 0; }
     .entry-page .entry-body { flex: 0 0 auto; width: 100%; height: clamp(360px, calc(100vh - 290px), 640px); margin: 20px auto 0; align-items: stretch; min-height: 0; }
-    .entry-page .photos { position: static; height: 100%; display: flex; flex-direction: column; gap: 6px; min-height: 0; }
-    .entry-page .ph.feature { flex: 1; min-height: 0; aspect-ratio: auto; }
-    .entry-page .ph.feature img { object-position: center; }
-    .entry-page .photo-row { flex-shrink: 0; height: 230px; margin-top: 0; }
+    .entry-page .photos { position: static; height: 100%; display: flex; flex-direction: column; gap: 6px; min-height: 0; overflow: hidden; }
+    .entry-page .ph.feature { flex: 0 0 auto; min-height: 0; aspect-ratio: 3 / 2; }
+    .entry-page .photo-row { flex: 1 1 auto; min-height: 0; height: auto; margin-top: 0; }
     .entry-page .text-col { height: 100%; overflow-y: auto; padding-right: 14px; }
     .entry-page footer { display: none; }
     .entry-page .text-col::-webkit-scrollbar { width: 6px; }
