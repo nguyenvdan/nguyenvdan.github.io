@@ -399,8 +399,8 @@ a.entry:hover { opacity: 0.6; }
 @media (max-width: 720px) {
     .entry-col, .entry-body { padding: 0 22px; }
     .entry-body { grid-template-columns: 1fr; gap: 28px; }
-    .photo-row { height: auto; grid-template-columns: 1fr 1fr; }
-    .photo-row .ph { height: auto; aspect-ratio: 4 / 5; }
+    .photo-row { height: auto; grid-template-columns: 1fr; }
+    .photo-row .ph { height: auto; aspect-ratio: 3 / 2; }
     .text-col { position: static; }
 }
 
