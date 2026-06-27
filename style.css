@@ -378,6 +378,28 @@ a.pub-title:hover { text-decoration-color: var(--ink); }
 .entry-back { display: inline-block; margin-bottom: 28px; font-size: 0.84rem; color: var(--muted); text-decoration: none; transition: color 0.2s var(--ease); }
 .entry-back:hover { color: var(--ink); }
 
+/* title block overlaid on the main photo */
+.ph.feature { position: relative; }
+.feature-overlay {
+    position: absolute;
+    left: 0; right: 0; top: 0;
+    padding: 22px 26px 34px;
+    text-align: left;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.34) 50%, transparent);
+    pointer-events: none;
+}
+.feature-overlay .entry-back {
+    display: inline-block;
+    margin-bottom: 12px;
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.85);
+    pointer-events: auto;
+    transition: color 0.2s var(--ease);
+}
+.feature-overlay .entry-back:hover { color: #fff; }
+.feature-overlay .date { font-size: 0.75rem; color: rgba(255,255,255,0.82); text-transform: lowercase; letter-spacing: 0.05em; margin-bottom: 4px; }
+.feature-overlay h1 { font-size: clamp(1.7rem, 3.6vw, 2.4rem); font-weight: 600; letter-spacing: -0.03em; line-height: 1.05; color: #fff; margin: 0; }
+
 /* photo essay — photo cluster left, text right */
 .entry-main { padding: 72px 0 96px; }
 .entry-col { max-width: 1120px; margin: 0 auto; padding: 0 36px; }
@@ -423,6 +445,24 @@ a.pub-title:hover { text-decoration-color: var(--ink); }
     .photos { position: static; }
     .photo-row { height: auto; grid-template-columns: 1fr; }
     .photo-row .ph { height: auto; aspect-ratio: 3 / 2; }
+}
+
+/* entry page — fixed viewport, vertically centered, only the writing scrolls (desktop) */
+@media (min-width: 721px) {
+    body.entry-page { height: 100vh; overflow: hidden; display: flex; flex-direction: column; }
+    .entry-page .topbar { flex-shrink: 0; }
+    .entry-page .entry-main { flex: 1; min-height: 0; display: flex; flex-direction: column; padding: 14px 0; }
+    .entry-page .entry-col { flex-shrink: 0; width: 100%; }
+    .entry-page .entry-head { margin-bottom: 0; }
+    .entry-page .entry-body { flex: 0 0 auto; width: 100%; height: clamp(360px, calc(100vh - 290px), 640px); margin: 20px auto 0; align-items: stretch; min-height: 0; }
+    .entry-page .photos { position: static; height: 100%; display: flex; flex-direction: column; gap: 6px; min-height: 0; }
+    .entry-page .ph.feature { flex: 1; min-height: 0; aspect-ratio: auto; }
+    .entry-page .photo-row { flex-shrink: 0; height: 230px; margin-top: 0; }
+    .entry-page .text-col { height: 100%; overflow-y: auto; padding-right: 14px; }
+    .entry-page footer { display: none; }
+    .entry-page .text-col::-webkit-scrollbar { width: 6px; }
+    .entry-page .text-col::-webkit-scrollbar-thumb { background: var(--line); border-radius: 3px; }
+    .entry-page .text-col::-webkit-scrollbar-track { background: transparent; }
 }
 
 /* lightbox */
