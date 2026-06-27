@@ -197,6 +197,8 @@ a.entry:hover { opacity: 0.6; }
 }
 .proj-item:hover { padding-left: 8px; }
 .proj-name { font-size: 1.02rem; font-weight: 600; color: var(--ink); margin-bottom: 11px; }
+.gh-icon { width: 15px; height: 15px; fill: var(--faint); vertical-align: -2px; margin-left: 9px; transition: fill 0.2s var(--ease); }
+.proj-item:hover .gh-icon { fill: var(--ink); }
 .proj-item .tags span {
     font-size: 0.8rem;
     color: var(--ink-soft);
