@@ -460,7 +460,7 @@ a.pub-title:hover { text-decoration-color: var(--ink); }
 .ph img { width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity 0.2s var(--ease); }
 .ph:hover img { opacity: 0.88; }
 .ph.feature { aspect-ratio: 3 / 2; }
-.ph.feature img { object-position: center; }
+.ph.feature img { object-position: center 25%; }
 
 /* photos pin on the left while the text scrolls */
 .photos { position: sticky; top: 88px; align-self: start; }
@@ -490,8 +490,8 @@ a.pub-title:hover { text-decoration-color: var(--ink); }
     .photo-row { height: 32vw; max-height: 210px; }
 }
 
-/* entry page — fixed viewport, vertically centered, only the writing scrolls (desktop) */
-@media (min-width: 721px) {
+/* entry page — fixed viewport, vertically centered, only the writing scrolls (desktop, tall screens) */
+@media (min-width: 721px) and (min-height: 600px) {
     body.entry-page { height: 100vh; overflow: hidden; display: flex; flex-direction: column; }
     .entry-page .topbar { flex-shrink: 0; }
     .entry-page .entry-main { flex: 1; min-height: 0; display: flex; flex-direction: column; padding: 14px 0; }
@@ -500,6 +500,7 @@ a.pub-title:hover { text-decoration-color: var(--ink); }
     .entry-page .entry-body { flex: 0 0 auto; width: 100%; height: clamp(360px, calc(100vh - 290px), 640px); margin: 20px auto 0; align-items: stretch; min-height: 0; }
     .entry-page .photos { position: static; height: 100%; display: flex; flex-direction: column; gap: 6px; min-height: 0; }
     .entry-page .ph.feature { flex: 1; min-height: 0; aspect-ratio: auto; }
+    .entry-page .ph.feature img { object-position: center; }
     .entry-page .photo-row { flex-shrink: 0; height: 230px; margin-top: 0; }
     .entry-page .text-col { height: 100%; overflow-y: auto; padding-right: 14px; }
     .entry-page footer { display: none; }
