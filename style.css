@@ -187,6 +187,29 @@ a.entry:hover { opacity: 0.6; }
 .lnk { color: inherit; text-decoration: none; border-bottom: 1px solid var(--hair); transition: border-color 0.2s var(--ease); }
 .lnk:hover { border-color: var(--ink); }
 
+/* projects list */
+.proj-item {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 18px 0;
+    border-top: 1px solid var(--hair);
+    transition: padding-left 0.2s var(--ease);
+}
+.proj-item:first-child { border-top: none; }
+.proj-item:hover { padding-left: 8px; }
+.proj-name { font-size: 1.02rem; font-weight: 600; color: var(--ink); margin-bottom: 11px; }
+.proj-item .tags span {
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    border-radius: 6px;
+    padding: 4px 11px;
+    transition: border-color 0.2s var(--ease), background 0.2s var(--ease);
+}
+.proj-item:hover .tags span { border-color: rgba(255, 255, 255, 0.26); background: rgba(255, 255, 255, 0.09); }
+
 /* publications */
 .pub { margin-bottom: 16px; max-width: 60ch; }
 .pub:last-child { margin-bottom: 0; }
