@@ -46,8 +46,8 @@ body::after {
 /* Kindle-style highlight (Wispr Flow note) */
 .wispr { text-align: center; margin: 34px 0 2px; font-size: 0.9rem; line-height: 1.95; }
 .hl {
-    background: #f3d3a0;
-    color: #2a2114;
+    background: #d3c4f0;
+    color: #261f3d;
     font-style: italic;
     padding: 3px 7px;
     border-radius: 3px;
