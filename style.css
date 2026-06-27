@@ -241,6 +241,35 @@ a.pub-title:hover { text-decoration-color: var(--ink); }
 }
 .tags span:hover { border-color: rgba(255, 255, 255, 0.3); color: var(--ink); }
 
+/* coursework dropdown */
+.coursework { margin-top: 30px; }
+.coursework summary {
+    list-style: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    text-transform: lowercase;
+    font-weight: 600;
+    color: var(--muted);
+    transition: color 0.2s var(--ease);
+}
+.coursework summary::-webkit-details-marker { display: none; }
+.coursework summary:hover { color: var(--ink); }
+.coursework summary::after { content: "›"; display: inline-block; font-size: 1.05rem; color: var(--faint); line-height: 1; transition: transform 0.2s var(--ease); }
+.coursework[open] summary::after { transform: rotate(90deg); }
+.course-list {
+    margin-top: 18px;
+    list-style: none;
+    padding: 0;
+    columns: 2;
+    column-width: 12rem;
+    column-gap: 40px;
+}
+.course-list li { font-size: 0.92rem; line-height: 1.4; color: var(--muted); padding: 5px 0; break-inside: avoid; }
+
 .mail {
     font-size: 0.95rem;
     color: var(--ink);
