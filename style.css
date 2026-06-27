@@ -460,7 +460,7 @@ a.pub-title:hover { text-decoration-color: var(--ink); }
 .ph img { width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity 0.2s var(--ease); }
 .ph:hover img { opacity: 0.88; }
 .ph.feature { aspect-ratio: 3 / 2; }
-.ph.feature img { object-position: center 25%; }
+.ph.feature img { object-position: center 10%; }
 
 /* photos pin on the left while the text scrolls */
 .photos { position: sticky; top: 88px; align-self: start; }
