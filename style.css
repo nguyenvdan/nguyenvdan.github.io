@@ -484,11 +484,10 @@ a.pub-title:hover { text-decoration-color: var(--ink); }
 
 @media (max-width: 720px) {
     .entry-col, .entry-body { padding: 0 22px; }
-    .entry-body { grid-template-columns: 1fr; gap: 28px; }
+    .entry-body { grid-template-columns: 1fr; gap: 22px; }
     .photos { position: static; }
-    .photo-row { height: auto; grid-template-columns: 1fr; }
-    .photos .ph, .photos .ph.feature { height: auto; aspect-ratio: auto; }
-    .photos .ph img { height: auto; }
+    /* keep the same cluster as desktop: feature on top, 3-across row below */
+    .photo-row { height: 32vw; max-height: 210px; }
 }
 
 /* entry page — fixed viewport, vertically centered, only the writing scrolls (desktop) */
