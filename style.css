@@ -192,11 +192,9 @@ a.entry:hover { opacity: 0.6; }
     display: block;
     text-decoration: none;
     color: inherit;
-    padding: 18px 0;
-    border-top: 1px solid var(--hair);
+    padding: 16px 0;
     transition: padding-left 0.2s var(--ease);
 }
-.proj-item:first-child { border-top: none; }
 .proj-item:hover { padding-left: 8px; }
 .proj-name { font-size: 1.02rem; font-weight: 600; color: var(--ink); margin-bottom: 11px; }
 .proj-item .tags span {
