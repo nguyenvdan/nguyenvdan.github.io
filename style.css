@@ -468,6 +468,7 @@ a.pub-title:hover { text-decoration-color: var(--ink); }
 .photo-row { display: grid; grid-template-columns: 1fr 1.4fr 1fr; gap: 6px; height: 250px; margin-top: 6px; }
 .photo-row .ph { height: 100%; }
 .photo-row .ph img { object-position: center 28%; }
+.photo-row .ph:nth-child(2) img { object-position: center 48%; }
 
 .text-col { display: flex; flex-direction: column; gap: 16px; }
 .text-col p { font-size: 1.04rem; line-height: 1.78; color: var(--ink-soft); margin: 0; }
