@@ -509,6 +509,11 @@ a.pub-title:hover { text-decoration-color: var(--ink); }
     .entry-page .text-col::-webkit-scrollbar-track { background: transparent; }
 }
 
+/* touch devices (incl. landscape phone): don't pin the photos — scroll the whole page together */
+@media (hover: none) {
+    .photos { position: static; }
+}
+
 /* lightbox */
 .lightbox {
     position: fixed;
