@@ -9,15 +9,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* stacked layout for this entry: photos on top, text underneath */
-        .stack-body { max-width: 720px; margin: 32px auto 0; padding: 0 24px; }
-        .stack-photos { display: flex; flex-direction: column; gap: 14px; }
-        .stack-photos .ph { position: static; }
-        .stack-photos .logo { align-self: center; width: min(300px, 70%); aspect-ratio: 1 / 1; }
-        .stack-photos .logo img { object-fit: cover; }
-        .stack-photos .shot { width: 100%; aspect-ratio: 16 / 9; }
-        .stack-photos .shot img { object-fit: cover; }
+        /* side-by-side photos on top, text underneath */
+        .stack-body { max-width: 860px; margin: 32px auto 0; padding: 0 24px; }
+        .stack-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; height: 300px; }
+        .stack-photos .ph { position: static; height: 100%; }
+        .stack-photos .ph img { object-fit: cover; }
+        .stack-photos .logo img { object-fit: contain; }
         .stack-body .text-col { margin-top: 28px; }
+        @media (max-width: 640px) {
+            .stack-photos { height: 44vw; }
+        }
     </style>
 </head>
 <body>
