@@ -8,8 +8,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* stacked layout for this entry: photos on top, text underneath */
+        .stack-body { max-width: 720px; margin: 32px auto 0; padding: 0 24px; }
+        .stack-photos { display: flex; flex-direction: column; gap: 14px; }
+        .stack-photos .ph { position: static; }
+        .stack-photos .logo { align-self: center; width: min(300px, 70%); aspect-ratio: 1 / 1; }
+        .stack-photos .logo img { object-fit: cover; }
+        .stack-photos .shot { width: 100%; aspect-ratio: 16 / 9; }
+        .stack-photos .shot img { object-fit: cover; }
+        .stack-body .text-col { margin-top: 28px; }
+    </style>
 </head>
-<body class="entry-page">
+<body>
     <header class="topbar">
         <div class="topbar-inner">
             <a href="index.html" class="wordmark">Daniel Nguyen</a>
@@ -31,12 +42,10 @@
             </div>
         </div>
 
-        <div class="entry-body">
-            <div class="photos">
-                <figure class="ph feature"><img src="journal/jwp-1.jpg" data-full="journal/jwp-1-full.jpg" alt="" loading="lazy"></figure>
-                <div class="photo-row" style="grid-template-columns: 1fr; height: 200px;">
-                    <figure class="ph"><img src="journal/jwp-2.jpg" data-full="journal/jwp-2-full.jpg" alt="" loading="lazy"></figure>
-                </div>
+        <div class="stack-body">
+            <div class="stack-photos photos">
+                <figure class="ph logo"><img src="journal/jwp-2.jpg" data-full="journal/jwp-2-full.jpg" alt="" loading="lazy"></figure>
+                <figure class="ph shot"><img src="journal/jwp-1.jpg" data-full="journal/jwp-1-full.jpg" alt="" loading="lazy"></figure>
             </div>
 
             <div class="text-col">
