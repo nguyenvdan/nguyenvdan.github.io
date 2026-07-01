@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>june was promising – Daniel Nguyen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="entry-page">
+    <header class="topbar">
+        <div class="topbar-inner">
+            <a href="index.html" class="wordmark">Daniel Nguyen</a>
+            <nav>
+                <a href="experience.html">experience</a>
+                <a href="projects.html">projects</a>
+                <a href="skills.html">skills</a>
+                <a href="blog.html" class="active">thoughts</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="entry-main">
+        <div class="entry-col">
+            <a href="blog.html" class="entry-back">← thoughts</a>
+            <div class="entry-head">
+                <div class="date">june 30, 2026</div>
+                <h1>june was promising</h1>
+            </div>
+        </div>
+
+        <div class="entry-body">
+            <div class="photos">
+                <figure class="ph feature"><img src="journal/jwp-1.jpg" data-full="journal/jwp-1-full.jpg" alt="" loading="lazy"></figure>
+                <div class="photo-row" style="grid-template-columns: 1fr; height: 200px;">
+                    <figure class="ph" style="background: #0e5a86;"><img src="journal/jwp-2.jpg" data-full="journal/jwp-2-full.jpg" alt="" loading="lazy" style="object-fit: contain;"></figure>
+                </div>
+            </div>
+
+            <div class="text-col">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-inner">© 2026 Daniel Nguyen</div>
+    </footer>
+
+    <div class="lightbox" id="lightbox"><img src="" alt=""></div>
+
+    <script>
+        (function () {
+            var lb = document.getElementById('lightbox');
+            var lbImg = lb.querySelector('img');
+            var close = function () { lb.classList.remove('open'); document.body.style.overflow = ''; };
+            document.querySelectorAll('.photos .ph img').forEach(function (img) {
+                var full = img.getAttribute('data-full') || img.src;
+                var pre = new Image(); pre.src = full;   // preload so the zoom is instant
+                img.parentElement.addEventListener('click', function (e) {
+                    if (e.target.closest('a')) return;
+                    lbImg.src = full;
+                    lb.classList.add('open');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+            lb.addEventListener('click', close);
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+        })();
+    </script>
+    <script src="cursor.js"></script>
+</body>
+</html>
