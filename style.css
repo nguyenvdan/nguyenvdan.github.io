@@ -26,7 +26,7 @@
 
     /* asymmetric left gutter — content sits left, space breathes right (ma + fukinsei) */
     --gutter: clamp(22px, 13vw, 210px);
-    --measure: 600px;
+    --measure: 660px;
     --radius: 4px;
 
     /* stillness — slow, gentle, no bounce */
@@ -52,17 +52,6 @@ body {
 
 ::selection { background: var(--clay-wash); color: var(--ink); }
 
-/* patina: warm unevenness + paper tooth (wabi-sabi) */
-body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    z-index: -2;
-    pointer-events: none;
-    background:
-        radial-gradient(140% 90% at 12% -5%, rgba(255, 253, 247, 0.7), transparent 45%),
-        radial-gradient(120% 120% at 100% 100%, rgba(156, 107, 82, 0.05), transparent 50%);
-}
 
 a { color: inherit; }
 :focus-visible {
@@ -71,18 +60,14 @@ a { color: inherit; }
     border-radius: 2px;
 }
 
-/* Kindle-style highlight (Wispr Flow note) — re-toned for paper */
-.wispr { text-align: left; margin: 40px 0 2px; font-size: 0.9rem; line-height: 2.1; font-weight: 300; }
+/* Wispr Flow note — quiet, plain italic (kanso) */
+.wispr { text-align: left; margin: 38px 0 2px; font-size: 0.86rem; line-height: 2; font-weight: 300; max-width: 46ch; }
 .hl {
-    background: var(--clay-wash);
-    color: var(--clay-deep);
+    color: var(--muted);
     font-style: italic;
-    padding: 2px 6px;
-    border-radius: 2px;
-    box-decoration-break: clone;
-    -webkit-box-decoration-break: clone;
 }
-.hl a { color: inherit; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; white-space: nowrap; }
+.hl a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line); text-underline-offset: 3px; white-space: nowrap; transition: border-color 0.4s var(--ease); }
+.hl a:hover { border-color: var(--clay); }
 .hl-blue {
     background: rgba(74, 90, 120, 0.14);
     color: #3b4763;
@@ -99,12 +84,13 @@ a { color: inherit; }
 /* ---------- Top bar — plain, quiet, left-clustered (fukinsei) ---------- */
 .topbar { background: transparent; }
 .topbar-inner {
-    max-width: 940px;
-    margin: 0;
-    padding: 40px var(--gutter) 0;
+    max-width: var(--measure);
+    margin: 0 auto;
+    padding: 40px 30px 0;
     display: flex;
     align-items: baseline;
-    gap: clamp(28px, 6vw, 68px);
+    justify-content: space-between;
+    gap: 24px;
 }
 .wordmark {
     font-size: 0.9rem;
@@ -145,11 +131,9 @@ a { color: inherit; }
 /* ---------- Page — left-offset column, generous ma ---------- */
 .page {
     max-width: var(--measure);
-    margin: 0;
-    margin-left: var(--gutter);
-    padding: clamp(88px, 15vh, 150px) var(--gutter) 120px 0;
+    margin: 0 auto;
+    padding: clamp(72px, 11vh, 116px) 30px 110px;
 }
-@media (max-width: 720px) { .page { padding-right: 22px; } }
 .panel { padding: 0; }
 
 /* ---------- Header — left aligned, asymmetric (fukinsei) ---------- */
@@ -534,7 +518,7 @@ a.pub-title:hover { border-color: var(--clay); }
 .lightbox.open img { transform: scale(1); }
 
 /* ---------- Footer ---------- */
-footer { max-width: var(--measure); margin: 0; margin-left: var(--gutter); padding: 40px var(--gutter) 64px 0; text-align: left; }
+footer { max-width: var(--measure); margin: 0 auto; padding: 48px 30px 64px; text-align: left; }
 .footer-inner { font-size: 0.74rem; font-weight: 300; color: var(--faint); letter-spacing: 0.03em; }
 
 /* ---------- Motion — a single quiet settle (seijaku) ---------- */
