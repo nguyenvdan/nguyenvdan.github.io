@@ -63,18 +63,6 @@ body::before {
         radial-gradient(140% 90% at 12% -5%, rgba(255, 253, 247, 0.7), transparent 45%),
         radial-gradient(120% 120% at 100% 100%, rgba(156, 107, 82, 0.05), transparent 50%);
 }
-body::after {
-    content: '';
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
-    opacity: 0.06;
-    mix-blend-mode: multiply;
-    background-image: url('noise.png');
-    background-size: 220px 220px;
-    background-repeat: repeat;
-}
 
 a { color: inherit; }
 :focus-visible {
